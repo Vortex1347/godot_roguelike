@@ -1,0 +1,7 @@
+.godot/
+.import/
+.DS_Store
+.serena/
+
+# Local save data
+user/

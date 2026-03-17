@@ -1,0 +1,85 @@
+[gd_scene format=3]
+
+[node name="BootstrapScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.058824, 0.066667, 1)
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -180.0
+offset_right = 340.0
+offset_bottom = 180.0
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Rows" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Eyebrow" type="Label" parent="Panel/Margin/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.823529, 0.737255, 0.435294, 1)
+text = "BOOTSTRAP / ФАЗА 0"
+
+[node name="Title" type="Label" parent="Panel/Margin/Rows"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Zakov Protocol"
+
+[node name="Body" type="RichTextLabel" parent="Panel/Margin/Rows"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 120)
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+text = "[b]Текущее состояние[/b]\n- Godot bootstrap создан\n- Visual foundation и docs зафиксированы\n- Gameplay-слой еще не начат\n\n[b]Ближайшие шаги[/b]\n- reference board\n- bunker/raid blockout\n- inventory/trader shell\n- add-on decisions только после явного выбора"
+
+[node name="Divider" type="HSeparator" parent="Panel/Margin/Rows"]
+layout_mode = 2
+
+[node name="Meta" type="GridContainer" parent="Panel/Margin/Rows"]
+layout_mode = 2
+columns = 2
+
+[node name="ViewportLabel" type="Label" parent="Panel/Margin/Rows/Meta"]
+layout_mode = 2
+text = "Базовый экран"
+
+[node name="ViewportValue" type="Label" parent="Panel/Margin/Rows/Meta"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.356863, 1)
+text = "1920x1080 / 16:9"
+
+[node name="StyleLabel" type="Label" parent="Panel/Margin/Rows/Meta"]
+layout_mode = 2
+text = "Визуальный режим"
+
+[node name="StyleValue" type="Label" parent="Panel/Margin/Rows/Meta"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.356863, 1)
+text = "Style bible + final-scale placeholders"
+
