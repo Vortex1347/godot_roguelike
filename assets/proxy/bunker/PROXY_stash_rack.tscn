@@ -21,11 +21,12 @@ size = Vector3(3.0, 2.4, 0.9)
 
 [node name="PROXY_StashRack" type="Node3D"]
 script = ExtResource("1")
-asset_id = &"proxy_bunker_stash_rack"
+asset_id = &"proxy_sanctum_archive_shelf"
 source = "internal_proxy_blockout"
-license_note = "Replace with final stash rack model before production content lock."
+license_note = "Replace with final sanctum archive shelf or vault stack before production content lock."
 replace_status = &"queued"
 replacement_owner = &"3d_modeler"
+magic_role = &"sanctum_prop"
 
 [node name="Rack" type="MeshInstance3D" parent="."]
 mesh = SubResource("3")

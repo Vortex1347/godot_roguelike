@@ -2,35 +2,64 @@
 
 ## Миссия
 
-Собрать на `Godot 4 + GDScript` одиночную `3D top-down extraction` игру, вдохновленную `ZERO Sievert`, но с собственным визуальным языком, заново созданными ассетами и production-safe proxy pipeline.
+Собрать на `Godot 4 + GDScript` одиночную `3D top-down magical extraction` игру с максимально близкой к `ZERO Sievert` структурой **по функции**, но с public-safe dark-fantasy сеттингом, собственным набором названий и production-safe proxy pipeline.
 
 ## Baseline
 
-- Публичный mood/reference baseline: live-версия `ZERO Sievert` на `17 марта 2026 года`.
-- Активный продуктовый baseline проекта: `3D`, `tilted orthographic camera`, `gritty low-poly`, desktop-first, single-player extraction loop.
-- `ZERO Sievert` теперь используется как ориентир по extraction mood, UI density и tactical readability, а не как обязательный `1:1` visual contract.
+- Official parity baseline verified on `March 17, 2026` from:
+  - [Steam store page](https://store.steampowered.com/app/1782120/ZERO_Sievert/)
+  - [Official Steam news hub](https://store.steampowered.com/news/app/1782120)
+- `ZERO Sievert` используется как parity-reference по системам, UX density, extraction pacing и tactical readability, а не как визуальный `1:1` контракт.
+- Продуктовый baseline проекта:
+  - `3D`
+  - `tilted orthographic camera`
+  - `grim arcane low-poly`
+  - desktop-first
+  - single-player
+  - public-safe naming
+- Functional translation baseline:
+  - bunker -> `Ash Sanctum`
+  - traders/services -> `Spell Broker`, `Archivist`, `Rune Forge`, `Alchemy Bench`, `Relic Ward`
+  - weapons -> spells / tomes / foci
+  - weapon mods -> runes / glyphs / seals
+  - ammo economy -> mana + catalysts
+  - armor/backpacks -> robes + relics + satchels
+  - underground special spaces -> ritual dungeons / cursed catacombs
+- Chosen defaults for roadmap work:
+  - survival stack: almost full parity
+  - dungeon layer: authored templates + procedural assembly
+  - naming policy: neutral original names
+  - naming depth: temporary canonical names, not final lore lock
 
 ## Product Pillars
 
-1. Extraction tension: каждая вылазка должна ощущаться рискованной, ценной и коротко-читаемой.
-2. Tactical readability: игрок всегда быстро понимает, где опасность, лут, выход, состояние персонажа и что происходит в бою даже в `3D top-down` кадре.
-3. Systems depth without code chaos: глубина строится через data-driven модели и сервисы, а не через монолитные сцены.
-4. Early visual contract: визуальный язык и asset replacement pipeline закладываются в каждом milestone сразу, а не переносятся на финальный polish.
+1. Functional parity first: spells, sanctum meta, dungeons, bosses, progression and extraction loop должны повторять глубину референса по функции.
+2. Tactical readability: игрок всегда быстро понимает угрозу, лут, выход, касты, статусы и состояние персонажа в `3D top-down` кадре.
+3. Sanctum-to-dungeon escalation: безопасный хаб, опасная поверхность и gated boss-content через `dungeon before boss`.
+4. Systems depth without code chaos: глубина строится через data-driven модели, сервисы и feature-first архитектуру.
+5. Early visual contract: sanctum, wilderness, dungeon и HUD получают читаемый visual contract заранее, а не после появления всей механики.
 
-## Первый исполнимый milestone
+## Current Implemented Benchmark
 
-Текущий исполнимый milestone:
+На момент этого документа в репозитории уже есть:
 
-- bunker hub
-- tilted-ortho camera
-- movement + bunker hotspots
-- stash/inventory shell поверх `3D`-сцены
-- gritty low-poly blockout
-- proxy-asset registry и replace-later workflow
-- station lighting / fog / silhouette readability benchmark
+- `3D` sanctum benchmark через существующий `BunkerSlice3D` technical route
+- walkable hub slice
+- live inventory/vault shell
+- proxy asset registry
+- magical intake flow
+- step-by-step verification contract для дальнейшей реализации
 
-## Non-goals bootstrap-этапа
+## Roadmap Authority
 
-- Не делать полный gameplay baseline до фикса `3D visual foundation`.
-- Не подключать addon'ы без отдельного выбора.
-- Не проектировать сразу outdoor slice, бой, AI и поздний контент.
+- Канонический execution plan теперь живет в:
+  - `docs/roadmap/magical_extraction_master_roadmap.md`
+  - `docs/roadmap/magic_parity_mapping.md`
+- Эти два документа должны считаться главным source-of-truth для новых системных задач.
+- Existing `Bunker*` code names сохраняются как временные technical aliases до отдельного cleanup/rename pass.
+
+## Current Non-Goals
+
+- Этот документный pass не переименовывает runtime API и не исполняет gameplay roadmap.
+- `Workshop/modding` не является gate для parity-complete baseline.
+- Финальные lore names не фиксируются в этом проходе; пока используются временные canonical names.

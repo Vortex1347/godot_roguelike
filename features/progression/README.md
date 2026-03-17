@@ -1,4 +1,3 @@
 # Progression Feature
 
-Зона для hunter perks, weapon XP, faction reputation и других мета-систем прогрессии.
-
+Зона для spell mastery, rune progression, guild reputation и других мета-систем прогрессии магического parity-плана.

@@ -24,11 +24,12 @@ size = Vector3(2.8, 2.0, 2.1)
 
 [node name="PROXY_ServiceCorner" type="Node3D"]
 script = ExtResource("1")
-asset_id = &"proxy_bunker_service_corner"
+asset_id = &"proxy_sanctum_rune_forge"
 source = "internal_proxy_blockout"
-license_note = "Replace with final service-generator set before production content lock."
+license_note = "Replace with final rune forge or alchemy station set before production content lock."
 replace_status = &"queued"
 replacement_owner = &"3d_modeler"
+magic_role = &"sanctum_prop"
 
 [node name="Generator" type="MeshInstance3D" parent="."]
 mesh = SubResource("3")

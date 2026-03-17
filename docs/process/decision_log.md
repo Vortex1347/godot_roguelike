@@ -1,5 +1,7 @@
 # Decision Log
 
+Исторические записи ниже сохраняются как журнал смены курса. Актуальный baseline и обязательные решения нужно читать по самым свежим записям и по `docs/roadmap/`.
+
 ## 2026-03-17
 
 ### Baseline
@@ -51,3 +53,31 @@
 - Интерактивные и геометрические шаги обязаны проходить через короткую behavioral-проверку: ввод, коллизии, hotspot responses, transitions.
 - Если шаг работает технически, но визуально или по поведению выглядит плохо, он не считается завершенным.
 - При наличии доступа к screenshot workflow свежий app-window screenshot становится стандартной частью визуальной проверки.
+
+### 2026-03-17 - Inventory preview fix and asset intake
+
+- Ошибка drag-preview в inventory фиксируется точечно через Godot 4 theme override API, а не обходным переписыванием inventory UI.
+- Базовый ingest-формат для временных внешних ассетов зафиксирован как `GLB`.
+- Введен обязательный intake flow: `assets/intake/raw -> assets/intake/normalized -> assets/proxy -> scene usage`.
+- Если сайты паков не дают прямой архивный URL для автоматического скачивания, архивы допускается загружать вручную в `assets/intake/raw/` без нарушения asset contract.
+
+### 2026-03-17 - Magical parity retheme for sanctum intake
+
+- Тематический baseline проекта смещен из generic sci-fi bunker benchmark в `mage sanctum` и dark-fantasy extraction parity.
+- В рамках этого прохода кодовые имена `Bunker*` и existing feature paths не переименовываются, чтобы не раздувать дифф без продуктовой ценности; смысловой перевод выполняется через docs, UI и proxy metadata.
+- Starter asset bundle теперь собирается под `sanctum environment + mage character + humanoid animations + focus props + magical VFX`.
+- Proxy registry и wrapper metadata расширены полем `magic_role`, чтобы 3D-моделлер и будущий агент различали sanctum props, focus meshes и spell VFX без догадок.
+- Текущий live shell переводится на лексикон `vault / field satchel / spell broker / scrying board / rune forge`, не ломая inventory runtime contract.
+
+### 2026-03-17 - Master roadmap adoption for magical parity
+
+- Source-of-truth проекта больше не трактуется как `inspired-only`; начиная с этого pass он описывает `public-safe magical parity by function`.
+- Official parity baseline для roadmap фиксируется по [Steam store page](https://store.steampowered.com/app/1782120/ZERO_Sievert/) и [official Steam news hub](https://store.steampowered.com/news/app/1782120) на `March 17, 2026`.
+- Для roadmap работы выбраны defaults:
+  - survival stack = almost full parity
+  - dungeon layer = authored templates + procedural assembly
+  - naming policy = neutral original names
+  - naming depth = temporary canonical names
+- Existing `Bunker*` code names и paths сохраняются как technical aliases до отдельного cleanup phase.
+- `docs/roadmap/magical_extraction_master_roadmap.md` и `docs/roadmap/magic_parity_mapping.md` становятся canonical execution docs для следующих implementers.
+- `Workshop/modding` выводится за пределы parity-complete gate и учитывается только как appendix / later layer.

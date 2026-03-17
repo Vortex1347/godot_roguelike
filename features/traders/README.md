@@ -1,4 +1,3 @@
 # Traders Feature
 
-Зона для trader flows, цен, продажи, покупки, репутационных проверок и UI-контрактов магазина.
-
+Зона для vendor flows магического parity-плана: spell broker, archivist, alchemist, repair/restoration services, цен, продажи, покупки, репутационных проверок и UI-контрактов магазина.

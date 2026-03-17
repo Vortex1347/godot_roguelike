@@ -57,19 +57,19 @@ size_flags_horizontal = 3
 [node name="Title" type="Label" parent="Chrome/Margin/Layout/Header/TitleBlock"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
-text = "Bunker Stash"
+text = "Sanctum Vault"
 
 [node name="Subtitle" type="Label" parent="Chrome/Margin/Layout/Header/TitleBlock"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.584314, 0.666667, 0.54902, 1)
-text = "Walkable bunker slice with live stash transfers."
+text = "Mage sanctum slice with live vault transfers."
 
 [node name="Status" type="Label" parent="Chrome/Margin/Layout/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 2
 theme_override_colors/font_color = Color(0.878431, 0.8, 0.572549, 1)
-text = "Drag items between stash and pack."
+text = "Drag relics between the vault and field satchel."
 
 [node name="Body" type="HBoxContainer" parent="Chrome/Margin/Layout"]
 layout_mode = 2
@@ -84,7 +84,7 @@ theme_override_constants/separation = 10
 [node name="StashTitle" type="Label" parent="Chrome/Margin/Layout/Body/StashColumn"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
-text = "Bunker Stash"
+text = "Sanctum Vault"
 
 [node name="StashGrid" type="Control" parent="Chrome/Margin/Layout/Body/StashColumn"]
 custom_minimum_size = Vector2(576, 288)
@@ -101,7 +101,7 @@ theme_override_constants/separation = 10
 [node name="InventoryTitle" type="Label" parent="Chrome/Margin/Layout/Body/InventoryColumn"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
-text = "Hunter Kit"
+text = "Field Satchel"
 
 [node name="InventoryGrid" type="Control" parent="Chrome/Margin/Layout/Body/InventoryColumn"]
 custom_minimum_size = Vector2(384, 288)
@@ -113,5 +113,4 @@ script = ExtResource("2")
 [node name="Hint" type="Label" parent="Chrome/Margin/Layout"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.662745, 0.705882, 0.639216, 1)
-text = "I closes the shell. Drag with the left mouse button. E opens from the stash hotspot."
-
+text = "I closes the shell. Drag with the left mouse button. E opens from the vault hotspot."

@@ -14,23 +14,23 @@ func build_bunker_session_state() -> Resource:
 	bunker_state.set("active_panel_action", &"")
 	bunker_state.set("is_inventory_open", false)
 	bunker_state.set("player_position", Vector2(480.0, 896.0))
-	bunker_state.set("player_position_3d", Vector3(0.0, 0.75, 4.2))
+	bunker_state.set("player_position_3d", Vector3(0.0, 0.75, 2.8))
 	return bunker_state
 
 
 func _build_player_inventory() -> Resource:
 	var container: Resource = CONTAINER_GRID_STATE_MODEL.new()
 	container.set("container_id", &"player_inventory")
-	container.set("title", "Hunter Kit")
+	container.set("title", "Field Satchel")
 	container.set("columns", 8)
 	container.set("rows", 6)
 	var items: Array[Resource] = []
-	items.append(_make_entry(&"mkr", "Makarov", Vector2i(2, 1), Vector2i(0, 0), 1, Color(0.27, 0.34, 0.40, 1.0), Color(0.78, 0.84, 0.88, 1.0)))
-	items.append(_make_entry(&"kni", "Knife", Vector2i(1, 2), Vector2i(2, 0), 1, Color(0.31, 0.31, 0.25, 1.0), Color(0.89, 0.83, 0.61, 1.0)))
-	items.append(_make_entry(&"med", "Medkit", Vector2i(2, 2), Vector2i(4, 0), 1, Color(0.43, 0.24, 0.24, 1.0), Color(0.92, 0.65, 0.58, 1.0)))
-	items.append(_make_entry(&"a18", "9x18", Vector2i(1, 1), Vector2i(0, 2), 60, Color(0.43, 0.37, 0.25, 1.0), Color(0.91, 0.82, 0.60, 1.0)))
-	items.append(_make_entry(&"wtr", "Water", Vector2i(1, 2), Vector2i(1, 2), 1, Color(0.20, 0.35, 0.43, 1.0), Color(0.55, 0.80, 0.92, 1.0)))
-	items.append(_make_entry(&"rat", "Ration", Vector2i(1, 1), Vector2i(3, 2), 1, Color(0.37, 0.39, 0.22, 1.0), Color(0.80, 0.84, 0.52, 1.0)))
+	items.append(_make_entry(&"emb", "Ember Tome", Vector2i(2, 1), Vector2i(0, 0), 1, Color(0.34, 0.20, 0.18, 1.0), Color(0.92, 0.57, 0.36, 1.0)))
+	items.append(_make_entry(&"ash", "Ash Wand", Vector2i(1, 2), Vector2i(2, 0), 1, Color(0.24, 0.21, 0.18, 1.0), Color(0.87, 0.81, 0.66, 1.0)))
+	items.append(_make_entry(&"vit", "Vital Draught", Vector2i(2, 2), Vector2i(4, 0), 1, Color(0.33, 0.18, 0.22, 1.0), Color(0.90, 0.53, 0.60, 1.0)))
+	items.append(_make_entry(&"aes", "Aether Salt", Vector2i(1, 1), Vector2i(0, 2), 36, Color(0.24, 0.33, 0.39, 1.0), Color(0.69, 0.86, 0.92, 1.0)))
+	items.append(_make_entry(&"mwt", "Moonwater", Vector2i(1, 2), Vector2i(1, 2), 1, Color(0.16, 0.28, 0.38, 1.0), Color(0.52, 0.78, 0.96, 1.0)))
+	items.append(_make_entry(&"sun", "Sunbread", Vector2i(1, 1), Vector2i(3, 2), 1, Color(0.41, 0.31, 0.17, 1.0), Color(0.88, 0.74, 0.42, 1.0)))
 	container.set("items", items)
 	return container
 
@@ -38,16 +38,16 @@ func _build_player_inventory() -> Resource:
 func _build_stash_inventory() -> Resource:
 	var container: Resource = CONTAINER_GRID_STATE_MODEL.new()
 	container.set("container_id", &"stash")
-	container.set("title", "Bunker Stash")
+	container.set("title", "Sanctum Vault")
 	container.set("columns", 12)
 	container.set("rows", 6)
 	var items: Array[Resource] = []
-	items.append(_make_entry(&"tol", "Tool Kit", Vector2i(2, 2), Vector2i(0, 0), 1, Color(0.31, 0.32, 0.36, 1.0), Color(0.73, 0.74, 0.81, 1.0)))
-	items.append(_make_entry(&"bat", "Battery", Vector2i(1, 2), Vector2i(3, 0), 1, Color(0.22, 0.29, 0.24, 1.0), Color(0.64, 0.84, 0.70, 1.0)))
-	items.append(_make_entry(&"scr", "Scrap", Vector2i(2, 1), Vector2i(5, 0), 4, Color(0.33, 0.27, 0.22, 1.0), Color(0.76, 0.65, 0.55, 1.0)))
-	items.append(_make_entry(&"flt", "Filter", Vector2i(2, 1), Vector2i(0, 3), 1, Color(0.23, 0.33, 0.28, 1.0), Color(0.67, 0.86, 0.72, 1.0)))
-	items.append(_make_entry(&"ful", "Fuel", Vector2i(1, 2), Vector2i(8, 1), 1, Color(0.40, 0.27, 0.18, 1.0), Color(0.92, 0.72, 0.42, 1.0)))
-	items.append(_make_entry(&"tap", "Tape", Vector2i(1, 1), Vector2i(10, 0), 2, Color(0.36, 0.33, 0.22, 1.0), Color(0.84, 0.80, 0.47, 1.0)))
+	items.append(_make_entry(&"rch", "Rune Chalk", Vector2i(2, 2), Vector2i(0, 0), 1, Color(0.25, 0.26, 0.31, 1.0), Color(0.72, 0.74, 0.84, 1.0)))
+	items.append(_make_entry(&"staff", "Ironwood Staff", Vector2i(1, 3), Vector2i(3, 0), 1, Color(0.25, 0.19, 0.13, 1.0), Color(0.76, 0.63, 0.41, 1.0)))
+	items.append(_make_entry(&"res", "Amber Resin", Vector2i(2, 1), Vector2i(5, 0), 3, Color(0.39, 0.26, 0.14, 1.0), Color(0.94, 0.70, 0.34, 1.0)))
+	items.append(_make_entry(&"ward", "Warding Charm", Vector2i(2, 1), Vector2i(0, 3), 1, Color(0.19, 0.31, 0.27, 1.0), Color(0.63, 0.86, 0.77, 1.0)))
+	items.append(_make_entry(&"sil", "Silver Thread", Vector2i(1, 2), Vector2i(8, 1), 1, Color(0.33, 0.34, 0.38, 1.0), Color(0.86, 0.88, 0.93, 1.0)))
+	items.append(_make_entry(&"vbl", "Void Bloom", Vector2i(1, 1), Vector2i(10, 0), 2, Color(0.20, 0.17, 0.27, 1.0), Color(0.69, 0.58, 0.88, 1.0)))
 	container.set("items", items)
 	return container
 

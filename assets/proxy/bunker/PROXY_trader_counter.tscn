@@ -24,11 +24,12 @@ size = Vector3(4.1, 2.4, 1.6)
 
 [node name="PROXY_TraderCounter" type="Node3D"]
 script = ExtResource("1")
-asset_id = &"proxy_bunker_trader_counter"
+asset_id = &"proxy_sanctum_spellbroker_desk"
 source = "internal_proxy_blockout"
-license_note = "Replace with final trader kiosk model before production content lock."
+license_note = "Replace with final spell broker desk before production content lock."
 replace_status = &"queued"
 replacement_owner = &"3d_modeler"
+magic_role = &"sanctum_prop"
 
 [node name="Counter" type="MeshInstance3D" parent="."]
 mesh = SubResource("3")

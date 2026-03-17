@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://vne03hn67iux"
+
+[deps]
+
+files=["res://assets/proxy/PROXY_asset_registry.source.translation", "res://assets/proxy/PROXY_asset_registry.license.translation", "res://assets/proxy/PROXY_asset_registry.used.translation", "res://assets/proxy/PROXY_asset_registry.replace.translation", "res://assets/proxy/PROXY_asset_registry.replacement.translation", "res://assets/proxy/PROXY_asset_registry.magic.translation"]
+
+source_file="res://assets/proxy/PROXY_asset_registry.csv"
+dest_files=["res://assets/proxy/PROXY_asset_registry.source.translation", "res://assets/proxy/PROXY_asset_registry.license.translation", "res://assets/proxy/PROXY_asset_registry.used.translation", "res://assets/proxy/PROXY_asset_registry.replace.translation", "res://assets/proxy/PROXY_asset_registry.replacement.translation", "res://assets/proxy/PROXY_asset_registry.magic.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

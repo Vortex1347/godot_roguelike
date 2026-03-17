@@ -21,11 +21,12 @@ size = Vector3(2.6, 1.9, 1.1)
 
 [node name="PROXY_TaskBoard" type="Node3D"]
 script = ExtResource("1")
-asset_id = &"proxy_bunker_task_board"
+asset_id = &"proxy_sanctum_scrying_board"
 source = "internal_proxy_blockout"
-license_note = "Replace with final task board signage set before production content lock."
+license_note = "Replace with final scrying board or ritual map set before production content lock."
 replace_status = &"queued"
 replacement_owner = &"3d_modeler"
+magic_role = &"sanctum_prop"
 
 [node name="Board" type="MeshInstance3D" parent="."]
 mesh = SubResource("3")

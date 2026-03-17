@@ -211,7 +211,7 @@ func _create_drag_preview(payload_state: Resource) -> Control:
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	label.anchors_preset = PRESET_FULL_RECT
-	label.theme_override_colors.font_color = Color(0.95, 0.96, 0.90, 1.0)
+	label.add_theme_color_override("font_color", Color(0.95, 0.96, 0.90, 1.0))
 	preview.add_child(label)
 	return preview
 

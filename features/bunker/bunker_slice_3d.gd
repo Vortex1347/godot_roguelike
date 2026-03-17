@@ -36,7 +36,7 @@ func _ready() -> void:
 
 	_player.movement_enabled = not _inventory_shell.is_open()
 	_refresh_prompt()
-	_show_status("3D bunker benchmark ready. Inventory shell stayed live through the pivot.")
+	_show_status("3D sanctum benchmark ready. Vault shell stayed live through the magical pivot.")
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -56,11 +56,11 @@ func _activate_hotspot(hotspot) -> void:
 		BUNKER_ACTIONS.OPEN_STASH, BUNKER_ACTIONS.OPEN_INVENTORY:
 			_inventory_shell.open_shell(action_id)
 		BUNKER_ACTIONS.OPEN_TRADER:
-			_show_status("Trader stall is blocked in as the next hub flow.")
+			_show_status("Spell broker remains blocked in as the next sanctum flow.")
 		BUNKER_ACTIONS.OPEN_TASK_BOARD:
-			_show_status("Task board remains a reserved 3D hotspot for the next pass.")
+			_show_status("Scrying board remains a reserved 3D hotspot for the next pass.")
 		_:
-			_show_status("This bunker prop is not wired yet.")
+			_show_status("This sanctum prop is not wired yet.")
 
 
 func _on_hotspot_focus_entered(hotspot) -> void:

@@ -53,10 +53,10 @@ func open_shell(action_id: StringName = BUNKER_ACTIONS.OPEN_STASH) -> void:
 	RunSession.set_bunker_inventory_open(true, action_id)
 	visible = true
 	mouse_filter = Control.MOUSE_FILTER_STOP
-	_title_label.text = "Bunker Stash"
-	_subtitle_label.text = "Walkable bunker slice with live stash transfers."
-	_status_label.text = "Drag items between stash and pack. Invalid placements are rejected."
-	_hint_label.text = "I closes the shell. Drag with the left mouse button. E opens from the stash hotspot."
+	_title_label.text = "Sanctum Vault"
+	_subtitle_label.text = "Mage sanctum slice with live vault transfers."
+	_status_label.text = "Drag relics and provisions between the vault and field satchel. Invalid placements are rejected."
+	_hint_label.text = "I closes the shell. Drag with the left mouse button. E opens from the vault hotspot."
 	_refresh_shell()
 	open_state_changed.emit(true)
 
@@ -254,4 +254,3 @@ func _is_inventory_drag_payload(value: Resource) -> bool:
 	if value == null:
 		return false
 	return value.get_script() == INVENTORY_DRAG_PAYLOAD_MODEL
-
