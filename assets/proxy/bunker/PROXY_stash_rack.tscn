@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://assets/proxy/proxy_asset_scene.gd" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(0.169, 0.207, 0.192, 1)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="2"]
+albedo_color = Color(0.345, 0.468, 0.392, 1)
+roughness = 0.92
+
+[sub_resource type="BoxMesh" id="3"]
+size = Vector3(2.8, 2.2, 0.7)
+
+[sub_resource type="BoxMesh" id="4"]
+size = Vector3(0.9, 0.55, 0.45)
+
+[sub_resource type="BoxShape3D" id="5"]
+size = Vector3(3.0, 2.4, 0.9)
+
+[node name="PROXY_StashRack" type="Node3D"]
+script = ExtResource("1")
+asset_id = &"proxy_bunker_stash_rack"
+source = "internal_proxy_blockout"
+license_note = "Replace with final stash rack model before production content lock."
+replace_status = &"queued"
+replacement_owner = &"3d_modeler"
+
+[node name="Rack" type="MeshInstance3D" parent="."]
+mesh = SubResource("3")
+material_override = SubResource("1")
+position = Vector3(0, 1.1, 0)
+
+[node name="CrateA" type="MeshInstance3D" parent="."]
+mesh = SubResource("4")
+material_override = SubResource("2")
+position = Vector3(-0.75, 0.45, 0.1)
+
+[node name="CrateB" type="MeshInstance3D" parent="."]
+mesh = SubResource("4")
+material_override = SubResource("2")
+position = Vector3(0.15, 1.05, -0.05)
+
+[node name="CrateC" type="MeshInstance3D" parent="."]
+mesh = SubResource("4")
+material_override = SubResource("2")
+position = Vector3(0.8, 1.55, 0.08)
+
+[node name="Collider" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collider"]
+shape = SubResource("5")
+position = Vector3(0, 1.2, 0)

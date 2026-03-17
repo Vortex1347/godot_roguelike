@@ -1,0 +1,5 @@
+asset_id,source,license_note,used_in,replace_status,replacement_owner
+proxy_bunker_stash_rack,internal_proxy_blockout,no_external_license; replace_with_final_model,res://features/bunker/bunker_slice_3d.tscn,queued,3d_modeler
+proxy_bunker_task_board,internal_proxy_blockout,no_external_license; replace_with_final_model,res://features/bunker/bunker_slice_3d.tscn,queued,3d_modeler
+proxy_bunker_trader_counter,internal_proxy_blockout,no_external_license; replace_with_final_model,res://features/bunker/bunker_slice_3d.tscn,queued,3d_modeler
+proxy_bunker_service_corner,internal_proxy_blockout,no_external_license; replace_with_final_model,res://features/bunker/bunker_slice_3d.tscn,queued,3d_modeler

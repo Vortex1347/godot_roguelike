@@ -1,14 +1,10 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://app/app_root.gd" id="1"]
-[ext_resource type="PackedScene" path="res://app/bootstrap_screen.tscn" id="2"]
 
 [node name="AppRoot" type="Node"]
 script = ExtResource("1")
 
-[node name="WorldRoot" type="Node2D" parent="."]
+[node name="WorldRoot" type="Node" parent="."]
 
 [node name="UiRoot" type="CanvasLayer" parent="."]
-
-[node name="BootstrapScreen" parent="UiRoot" instance=ExtResource("2")]
-

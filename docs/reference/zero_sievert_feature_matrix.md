@@ -2,6 +2,8 @@
 
 Baseline зафиксирован по публичным материалам Steam на `17 марта 2026 года`.
 
+После `3D inspired-only` pivot эта матрица используется как comparative reference по extraction systems и UX density, а не как обязательный `1:1` delivery contract.
+
 Источник: [Steam ZERO Sievert](https://store.steampowered.com/app/1782120/ZERO_Sievert/)
 
 | Система | Публичный baseline | Наш план |
@@ -23,4 +25,3 @@ Baseline зафиксирован по публичным материалам S
 
 - Любая новая фича сначала сопоставляется с baseline-строкой из этой матрицы.
 - Если фича не имеет аналога в baseline или выходит за выбранный milestone, она не добавляется молча.
-

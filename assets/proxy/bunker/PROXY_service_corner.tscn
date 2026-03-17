@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://assets/proxy/proxy_asset_scene.gd" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(0.176, 0.204, 0.216, 1)
+roughness = 0.94
+
+[sub_resource type="StandardMaterial3D" id="2"]
+albedo_color = Color(0.352, 0.446, 0.382, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="3"]
+size = Vector3(1.8, 1.8, 1.1)
+
+[sub_resource type="BoxMesh" id="4"]
+size = Vector3(0.9, 0.9, 0.9)
+
+[sub_resource type="BoxMesh" id="5"]
+size = Vector3(0.7, 1.2, 0.7)
+
+[sub_resource type="BoxShape3D" id="6"]
+size = Vector3(2.8, 2.0, 2.1)
+
+[node name="PROXY_ServiceCorner" type="Node3D"]
+script = ExtResource("1")
+asset_id = &"proxy_bunker_service_corner"
+source = "internal_proxy_blockout"
+license_note = "Replace with final service-generator set before production content lock."
+replace_status = &"queued"
+replacement_owner = &"3d_modeler"
+
+[node name="Generator" type="MeshInstance3D" parent="."]
+mesh = SubResource("3")
+material_override = SubResource("1")
+position = Vector3(-0.15, 0.9, 0)
+
+[node name="Crate" type="MeshInstance3D" parent="."]
+mesh = SubResource("4")
+material_override = SubResource("2")
+position = Vector3(0.95, 0.45, -0.3)
+
+[node name="Canister" type="MeshInstance3D" parent="."]
+mesh = SubResource("5")
+material_override = SubResource("2")
+position = Vector3(0.85, 0.6, 0.55)
+
+[node name="Collider" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collider"]
+shape = SubResource("6")
+position = Vector3(0, 1.0, 0)
